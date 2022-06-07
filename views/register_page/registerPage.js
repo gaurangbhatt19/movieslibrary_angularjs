@@ -7,7 +7,8 @@ var registerPage=angular.module("app.registerPage",['ngRoute','ngMaterial',"ngMe
 registerPage.config(["$routeProvider",function($routeProvider) {
     $routeProvider
     .when("/register",{
-        templateUrl:"./views/register_page/registerPage.html",
+        
+        templateUrl:"./views/register_page/registerPage copy.html",
         controller: "registerPageCtrl"
     })
 }])
@@ -16,28 +17,26 @@ registerPage.controller("registerPageCtrl",["$scope","$location","details",funct
     $scope.submitForm=function(){
         console.log($scope.register_form.confirmpassword.$error)
         var form_values=$scope.resigterdetails
-        
-        if(form_values.password!==form_values.confirmpassword){
-            $scope.register_form.$setPristine();
-            $scope.register_form.$setValidity();
-            $scope.register_form.$setUntouched();
-            $location.path("/register")
-        }else{
             console.log("No error")
             details.setValues(form_values)
+            console.info(details.getValues())
             $location.path("/premium")
-        }
+        
         
     }
 
     $scope.validateConfirmPassword=function(){
-        console.log( $scope.register_form.confirmpassword.$error)
 
         if($scope.resigterdetails.password!==$scope.resigterdetails.confirmpassword){
-            $scope.register_form.confirmpassword.$error.validate=true
+            $scope.register_form.confirmpassword.$setValidity('validation_err', false);
         }else{
-            $scope.register_form.confirmpassword.$error={}
+            $scope.register_form.confirmpassword.$setValidity('validation_err', true);
         }
-        console.log($scope.register_form.confirmpassword.$error)
     }
+
+    $scope.navigateLogin=function(){
+        $location.path('/login')
+    }
+
+
 }])

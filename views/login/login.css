@@ -103,12 +103,51 @@ p {
     font-size:24px;
   }
 }
+
 #register{
-    
-    border-radius:10px;
+  border: 4px solid dodgerblue;
+  border-radius:10px;
 }
 #register_details{
-  width:60%;
-  border-radius:1em;
-  padding: 1em 1em;
+width:70vw;
+height:70vh;
+border-radius:1em;
+padding: 1em 1em;
+background-color:yellow
+}
+.side_img{
+min-width: 20vw;
+max-width: 30vw;
+min-height:70vh;
+background-image: #F7971E;  /* fallback for old browsers */
+background-image: -webkit-linear-gradient(to right, #FFD200, #F7971E);  /* Chrome 10-25, Safari 5.1-6 */
+background-image: linear-gradient(to right, #FFD200, #F7971E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+#sidebar_2{
+min-width: 40vw;
+min-height:70vh;
+padding: 1em 4em;
+border-radius:2px;
+background-color:rgba(255, 255, 255, 0.4);
+margin-left:2vw;
+transition: box-shadow 2s, background-color 1s;
+transition-timing-function: ease;
+}
+
+#sidebar_2:hover{
+background-color:rgba(255, 255, 255, 0.6);
+-webkit-box-shadow: 11px 13px 22px -3px rgba(0,0,0,0.51);
+-moz-box-shadow: 11px 13px 22px -3px rgba(0,0,0,0.51);
+box-shadow: 11px 13px 22px -3px rgba(0,0,0,0.51);
+}
+
+#register_form{
+margin-top: 2em;
+}
+.form_item{
+margin-top: 4px;
+}
+#logo{
+width: 80%;
+height: 20%;
 }

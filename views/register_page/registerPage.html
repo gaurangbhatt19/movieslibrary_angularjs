@@ -5,21 +5,26 @@
     <div layout="row">
          <h1 flex="100"><strong>Register User</strong></h1>
     </div>
-  <md-content id="register_details" md-colors="{background: 'default-background-hue-1'}" class="content_div">
+  <!-- <md-content id="register_details" md-colors="{background: 'default-background-hue-1'}" class="content_div"> -->
     
 
         <form name="register_form" ng-submit="submitForm()" layout="column" layout-align="center center" novalidate>
-        <div layout="row">
+        <!-- <div layout="row">
         <md-input-container flex="90">
             <label>Username</label>
+            <md-icon md-font-icon="android" aria-label="android">
+              <span class="material-symbols-outlined">
+                person
+                </span>
+            </md-icon>
             <input required type="text" name="username" ng-model="resigterdetails.username">
             <div ng-messages="register_form.username.$error">
               <div ng-message="required">This is required.</div>
             </div>
-          </md-input-container>
-        </div>
+        </md-input-container>
+        </div> -->
 
-        <div layout="row" > 
+        <!-- <div layout="row" > 
             <md-input-container flex="90">
                 <label>Password</label>
                 <input required type="password" name="password" ng-model="resigterdetails.password">
@@ -27,18 +32,18 @@
                   <div ng-message="required">This is required.</div>
                 </div>
               </md-input-container>
-            </div>
-            <div layout="row" layout-align="center center">
+            </div> -->
+            <!-- <div layout="row" layout-align="center center">
                 <md-input-container flex="90">
                     <label>Confirm  Password</label>
                     <input required type="password" name="confirmpassword" ng-model="resigterdetails.confirmpassword">
                     <div ng-messages="register_form.confirmpassword.$error" ng-messages-multiple="true">  
-                      <!-- <div ng-message="validate">Password and Confirm password are not equal</div> -->
+                   
                       <div ng-message="required">This is required.</div>
                     </div>
                   </md-input-container>
-                </div>
-                <div layout="row" layout-align="center center" layout-wrap="">
+                </div> -->
+                <!-- <div layout="row" layout-align="center center" layout-wrap="">
                     <md-input-container flex="90">
                         <label>Contact Number</label>
                         <input type="number" ng-maxlength="10" ng-minlength="10" required name="contact" ng-model="resigterdetails.contact">
@@ -63,9 +68,25 @@
                 </div>
                 <div layout="row" flex="80">
                   <small>Already an existing user?....<a href="/index.html#!/login">Login</a></small>
-                </div> 
-      </form>
-   </md-content>
+                </div> -->
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Email address</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Password</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
+                <div class="form-group form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+        
+
+        </form>
+   <!-- </md-content> -->
     
     </div>
     <div>

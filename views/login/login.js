@@ -3,13 +3,13 @@ var login=angular.module('app.login',['ngRoute','app.userDetails'])
 login.config(['$routeProvider', function($routeProvider) {
     $routeProvider
     .when("/login",{
-        templateUrl:"./views/login/login.html",
+        templateUrl:"./views/login/login copy.html",
         controller: 'loginCtrl'
     })
 }
 ])
 
-login.controller('loginCtrl',["$scope","details", function($scope,details) {
+login.controller('loginCtrl',["$scope","details",'$location', function($scope,details,$location) {
 $scope.submitForm=function(){
   let values=details.getValues()
   console.log(values)
@@ -19,4 +19,9 @@ $scope.submitForm=function(){
       $location.path('/login')
   }
 }
+
+$scope.navigateRegister=function(){
+    $location.path('/register')
+}
+
 }])

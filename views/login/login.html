@@ -6,10 +6,11 @@
          <h1 flex="100"><strong>Login</strong></h1>
     </div>
   <md-content id="register_details" md-colors="{background: 'default-background-hue-1'}" class="content_div">
-        <form name="login_form" ng-submit="submitForm()" layout="column" layout-align="start center" novalidate>
-        <div layout="row">
+        <form name="login_form" ng-submit="submitForm()" layout="column" layout-align="start center" novalidate layout-wrap="">
+        <div layout="row"> 
+        <label>Username</label>
         <md-input-container flex="90">
-            <label>Username</label>
+           
             <input required type="text" name="username" ng-model="loginDetails.username">
             <div ng-messages="login_form.username.$error">
               <div ng-message="required">This is required.</div>

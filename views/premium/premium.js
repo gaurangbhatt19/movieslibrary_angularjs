@@ -1,4 +1,4 @@
-var premium = angular.module("app.premium",['ngRoute'])
+var premium = angular.module("app.premium",['ngRoute','app.userDetails'])
 
 premium.config(["$routeProvider",function($routeProvider) {
     $routeProvider
@@ -8,9 +8,13 @@ premium.config(["$routeProvider",function($routeProvider) {
     })
 }])
 
-premium.controller("premiumCtrl",["$scope","$location",function($scope,$location){
-    $scope.premium=function(details){
-        console.log(details)
+premium.controller("premiumCtrl",["$scope","$location",'details',function($scope,$location,details){
+    $scope.premium=function(premium_details){
+        console.log(premium_details)
+        let values=details.getValues()
+        premium.cb1===true?values.premium=true:values.premium=false
+        details.setValues(values)
+        console.log(details.getValues())
         $location.path("/library")
     }
 }])

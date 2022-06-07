@@ -1,0 +1,75 @@
+<div id="" layout="row">
+  <link rel="stylesheet" href="./views/login/login.css">
+  <div layout="row" layout-align="center center" flex="">
+    <div layout="column">
+     <div class="side_img">
+      <img src="https://bootstrapious.com/i/snippets/sn-registeration/illustration.svg" alt="" class="img-fluid mt-4">
+      <div layout="column" layout-align="center center" class="form_item">
+        <small style="color: #fff;" class="form_item">Didn't Register?....</small>
+        <md-button class="md-raised md-primary" flex="50" style="color:white;border-radius: 4px;cursor: pointer;" ng-click="navigateRegister()">Register</md-button>
+      <div>
+        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+        <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+        <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+        <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+        </g>
+        </svg>
+        
+      </div>
+    </div>
+     </div> 
+     
+    </div>
+     
+  </div>
+  <div layout="column" flex="" id="sidebar_2" layout-align="center center">
+    
+      <h2>Login</h2>
+      <small>Sign In to get access to your movies.....</small>      
+      <div layout="column" layout-wrap>
+        <form id="register_form" ng-submit="submitForm()"  name="login_form" layout="column">
+          <md-input-container flex="">
+            <label>Username</label>
+            <md-icon md-font-icon="android" aria-label="android">
+              <span class="material-symbols-outlined">
+                person
+                </span>
+            </md-icon>
+            <input required type="text" name="username" ng-model="loginDetails.username">
+            <div ng-messages="login_form.username.$error">
+              <div ng-message="required">This is required.</div>
+            </div>
+        </md-input-container>
+        <div layout="row" class="form_item">
+        <md-input-container flex="">
+          <label>Password</label>
+          <md-icon md-font-icon="android" aria-label="android">
+            <span class="material-symbols-outlined">
+              lock
+              </span>
+          </md-icon>
+          <input required type="password" name="password" ng-model="loginDetails.password">
+          <div ng-messages="login_form.password.$error">
+            <div ng-message="required">This is required.</div>
+          </div>
+        </md-input-container>
+        </div>
+
+
+          <div layout="row" layout-align="center center" class="form_item">
+            <md-button class="md-raised md-warn" flex="50" type="submit" style="color:white;border-radius: 4px;cursor: pointer;"ng-disabled="login_form.$invalid">Login</md-button>
+           </div>
+          <!-- <div layout="row" layout-align="center center" class="form_item">
+            <small>Please fill the form carefully.</small>
+          </div> -->
+        </form>
+      </div>
+    
+  </div>
+</div>

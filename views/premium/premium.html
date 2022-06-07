@@ -1,22 +1,22 @@
 <div id="premium" layout="column" layout-align="center center" ng-cloak>
-    <link rel="stylesheet" href="./views/premium/premium.html">
-    <div class="header" ng-controller="registerPageCtrl">
-    <div class="inner-header" layout="column" layout-align="center center" ng-cloak>
+    <link rel="stylesheet" href="./views/premium/premium.css">
     <div layout="row">
-         <h1 flex="100"><strong>Premium / Non Premium</strong></h1>
+         <h1 flex="100"><strong>Premium or Non Premium</strong></h1>
     </div>
-     <md-content id="premium-details" md-colors="{background: 'default-background-hue-1'}" class="content_div">
-       <form name="premium_details" layout="column" layout-align="center center">
-         <div layout="row">
-           <md-checkbox ng-model="premiumdetails.cb1" aria-label="premium" flex="50" class="md-primary" ng-disabled="premiumdetails.cb2">
-          Premium
+    <div layout="column" ng-cloak>
+      <form name="premium_details" layout="column" class="content_div">
+         <div layout="row" flex="" layout-align="center center">
+           <md-checkbox ng-model="premiumdetails.cb1" aria-label="premium" flex="25" class="md-primary" ng-disabled="premiumdetails.cb2">
+            <small>Premium</small>
          </md-checkbox>
-        <md-checkbox ng-model="premiumdetails.cb2" aria-label="non-premium" flex="50" ng-disabled="premiumdetails.cb1">
-          Non Premium
+        <md-checkbox ng-model="premiumdetails.cb2" aria-label="non-premium" flex="25" ng-disabled="premiumdetails.cb1">
+          <small>Non Premium</small>
         </md-checkbox>
          </div>
-      <md-button class="md-raised md-warn" flex="50" type="submit" ng-click="premium(premiumdetails)" style="color:white;border-radius: 4px;cursor: pointer;"ng-disabled="((!premiumdetails.cb1) && (!premiumdetails.cb2))" >Save</md-button>
-       </form>
-       </md-content>
+         <div layout="row" layout-align="center center">
+           <md-button class="md-raised md-warn" flex="10" type="submit" ng-click="premium(premiumdetails)" style="color:white;border-radius: 4px;cursor: pointer;" ng-disabled="((!premiumdetails.cb1) && (!premiumdetails.cb2))" >Save</md-button>
+         </div>
+            </form>
     </div>
+       
 </div>
