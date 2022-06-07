@@ -1,14 +1,14 @@
 @import url(//fonts.googleapis.com/css?family=Lato:300:400);
-
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@700&display=swap');
 body {
   margin:0;
 }
 
 h1 {
-  font-family: 'Lato', sans-serif;
   font-weight:300;
   letter-spacing: 2px;
   font-size:48px;
+  font-family: 'Cairo', sans-serif;
 }
 p {
   font-family: 'Lato', sans-serif;
