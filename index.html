@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Music Gallery</title>
+    <script src="./lib/angular.js"></script>
+    <script src="./lib/angular-route.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-aria/1.8.3/angular-aria.min.js" integrity="sha512-674PQ5I4feceHJ9HZkcjzjRvmlpuWowIFM6RahwsCh1vrh1fxoMerr793aq2xobU9wJ9mDAgJ9d0WlP+WwZg6g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.2.5/angular-material.js" integrity="sha512-r9vXkO+sJL9e3NwHQY4U2XPanMws794rAfzq4u43WMNyPQX5/07oALQ3qDUyXL2EnJ3xBeNA+QBsWkvH/T3lhw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./app.js"></script>
+    <script src="./views/register_page/registerPage.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.2.4/angular-material.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-animate/1.8.3/angular-animate.js" integrity="sha512-yDoMcZl9LGGR5U/gkySLy1mEGb9pJrA2FhUIzpcSGNTXVx1iQ3JZZv+Q5ihOul7DEDosNP1hl4D71cqyzyXVjA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./lib/angular-messages.js"></script>
+    <link rel="stylesheet" href="./index.css">
+    <script src="./views/premium/premium.js"></script>
+    <script src="./views/login/login.js"></script>
+    <script src="./views/library/library.js"></script>
+    <script src="./factory/userDetails.js"></script>
+</head>
+<body>
+   <div id="main_container" ng-view="" layout="column" layout-align="center center">
+   </div>
+    
+</body>
+</html>

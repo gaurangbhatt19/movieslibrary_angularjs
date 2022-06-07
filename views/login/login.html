@@ -1,0 +1,56 @@
+<div id="register" layout="column" layout-align="start center" ng-cloak>
+    <link rel="stylesheet" href="./views/login/login.css">
+    <div class="header">
+    <div class="inner-header" layout="column" layout-align="center center" ng-cloak>
+    <div layout="row">
+         <h1 flex="100"><strong>Login</strong></h1>
+    </div>
+  <md-content id="register_details" md-colors="{background: 'default-background-hue-1'}" class="content_div">
+        <form name="login_form" ng-submit="submitForm()" layout="column" layout-align="start center" novalidate>
+        <div layout="row">
+        <md-input-container flex="90">
+            <label>Username</label>
+            <input required type="text" name="username" ng-model="loginDetails.username">
+            <div ng-messages="login_form.username.$error">
+              <div ng-message="required">This is required.</div>
+            </div>
+          </md-input-container>
+        </div>
+        <div layout="row">
+            <md-input-container flex="90">
+                <label>Password</label>
+                <input required type="password" name="password" ng-model="loginDetails.password">
+                <div ng-messages="login_form.password.$error">
+                  <div ng-message="required">This is required.</div>
+                </div>
+              </md-input-container>
+            </div>
+
+                <div layout="row">
+                    <md-button class="md-raised md-warn" flex="50" type="submit" style="color:white;border-radius: 4px;cursor: pointer;" ng-disabled="login_form.$invalid">Login</md-button>
+                </div>
+        <div layout="row" flex="80">
+        <small>Not an existing user?....<a href="/index.html#!/register">Register</a></small>
+        </div>          
+      </form>
+   
+   </md-content>
+    
+    </div>
+    <div>
+    <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+    viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+    <defs>
+    <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+    </defs>
+    <g class="parallax">
+    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+    <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+    </g>
+    </svg>
+    </div>
+
+    </div>
+</div>
