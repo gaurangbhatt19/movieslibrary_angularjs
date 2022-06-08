@@ -9,14 +9,30 @@ login.config(['$routeProvider', function($routeProvider) {
 }
 ])
 
-login.controller('loginCtrl',["$scope","details",'$location', function($scope,details,$location) {
-$scope.submitForm=function(){
+login.controller('loginCtrl',["$scope","details",'$location','$mdDialog', function($scope,details,$location,$mdDialog) {
+$scope.submitForm=function(ev){
   let values=details.getValues()
   console.log(values)
   if($scope.loginDetails.username===values.username && $scope.loginDetails.password===values.password){
-      $location.path('/library')
+    values.isLogin=true
+    details.setValues(values)
+    console.log(details.getValues())
+    $location.path('/library')
   }else{
-      $location.path('/login')
+    values.isLogin=false
+    details.setValues(values)
+    console.log(details.getValues())
+    $mdDialog.show(
+        $mdDialog.alert()
+          .parent(angular.element(document.querySelector('#main_container')))
+          .clickOutsideToClose(true)
+          .title('Incorrect Credentials .......')
+          .textContent('Please enter correct credentials')
+          .ariaLabel('No Login')
+          .ok('OK')
+          .targetEvent(ev)
+      ); 
+    $location.path('/login')
   }
 }
 

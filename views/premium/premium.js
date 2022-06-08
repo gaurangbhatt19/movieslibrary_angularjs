@@ -12,9 +12,9 @@ premium.controller("premiumCtrl",["$scope","$location",'details',function($scope
     $scope.premium=function(premium_details){
         console.log(premium_details)
         let values=details.getValues()
-        premium.cb1===true?values.premium=true:values.premium=false
+        premium_details.cb1===true?values.isPremium=true:values.isPremium=false
         details.setValues(values)
         console.log(details.getValues())
-        $location.path("/library")
+        $location.path("/login")
     }
 }])

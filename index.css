@@ -30,5 +30,5 @@ background-image: linear-gradient(to right, #0575E6, #00F260);
 }
 .nav_bar{
   width:100%;
-  position: fixed;
+  position: static;
 }
