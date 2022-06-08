@@ -24,4 +24,11 @@ background: linear-gradient(to right, #0575E6, #00F260);
 #main_container{
     height: 100%;
     width: 100%;
+    background-image: #00F260;
+background-image: -webkit-linear-gradient(to right, #0575E6, #00F260);
+background-image: linear-gradient(to right, #0575E6, #00F260);
+}
+.nav_bar{
+  width:100%;
+  position: fixed;
 }

@@ -1,4 +1,4 @@
-var app=angular.module("app",["ngRoute","app.registerPage","app.premium","app.login","app.library"])
+var app=angular.module("app",["ngRoute","app.registerPage","app.premium","app.login","app.library","app.navbar"])
 
 app.config(["$routeProvider","$locationProvider",function($routeProvider,$locationProvider) {
     $locationProvider.hashPrefix("!")
