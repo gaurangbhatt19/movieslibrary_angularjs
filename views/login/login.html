@@ -20,7 +20,7 @@
         <div layout="row">
             <md-input-container flex="90">
                 <label>Password</label>
-                <input required type="password" name="password" ng-model="loginDetails.password">
+                <input required type="password" name="password" ng-model="loginDetails.password" ng-attr-type="{{ showPassword ? 'text' : 'password' }}" >
                 <div ng-messages="login_form.password.$error">
                   <div ng-message="required">This is required.</div>
                 </div>

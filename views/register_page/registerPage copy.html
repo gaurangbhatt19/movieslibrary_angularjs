@@ -50,12 +50,22 @@
         <div layout="row" class="form_item">
         <md-input-container flex="">
           <label>Password</label>
+          
           <md-icon md-font-icon="android" aria-label="android">
             <span class="material-symbols-outlined">
               lock
               </span>
           </md-icon>
-          <input required type="password" name="password" ng-model="resigterdetails.password">
+          <input required name="password" ng-model="resigterdetails.password" ng-attr-type="{{ showPassword ? 'text' : 'password' }}">
+          
+          <md-icon md-font-icon="android" aria-label="android" ng-click="togglePassword()">
+            <span class="material-symbols-outlined" ng-if="!showPassword">
+              visibility
+              </span>
+              <span class="material-symbols-outlined" ng-if="showPassword">
+                visibility_off
+                </span>
+          </md-icon>
           <div ng-messages="register_form.password.$error">
             <div ng-message="required">This is required.</div>
           </div>
@@ -67,7 +77,16 @@
             lock
             </span>
         </md-icon>
-        <input required type="password" name="confirmpassword" ng-model="resigterdetails.confirmpassword" ng-change="validateConfirmPassword()">
+        <input required type="password" name="confirmpassword" ng-model="resigterdetails.confirmpassword" ng-change="validateConfirmPassword()" ng-attr-type="{{ showConfirmPassword ? 'text' : 'password' }}">
+        <md-icon md-font-icon="android" aria-label="android" ng-click="toggleConfirmPassword()">
+          <span class="material-symbols-outlined" ng-if="!showConfirmPassword">
+            visibility
+            </span>
+            <span class="material-symbols-outlined" ng-if="showConfirmPassword">
+              visibility_off
+              </span>
+        </md-icon>
+
         <div ng-messages="register_form.confirmpassword.$error">
           <div ng-message="required">This is required.</div>
           <div ng-message="validation_err"> Confirm password is not valid</div>

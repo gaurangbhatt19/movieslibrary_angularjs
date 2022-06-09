@@ -10,7 +10,11 @@ login.config(['$routeProvider', function($routeProvider) {
 ])
 
 login.controller('loginCtrl',["$scope","details",'$location','$mdDialog', function($scope,details,$location,$mdDialog) {
+  $scope.showPassword=false
 
+  $scope.togglePassword=function(){
+    $scope.showPassword=!$scope.showPassword
+  }
 $scope.submitForm=function(ev){
   let values=details.getValues()
   console.log(values)

@@ -19,6 +19,15 @@ registerPage.config(["$routeProvider",function($routeProvider) {
 
 registerPage.controller("registerPageCtrl",["$scope","$location","details",function($scope,$location,details){
 
+    $scope.togglePassword=function(){
+        $scope.showPassword=!$scope.showPassword
+      }
+
+
+      $scope.toggleConfirmPassword=function(){
+        $scope.showConfirmPassword=!$scope.showConfirmPassword
+      }
+
     $scope.submitForm=function(){
         console.log($scope.register_form.confirmpassword.$error)
         var form_values=$scope.resigterdetails
