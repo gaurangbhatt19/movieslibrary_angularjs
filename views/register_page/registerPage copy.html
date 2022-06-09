@@ -56,10 +56,12 @@
               lock
               </span>
           </md-icon>
-          <input required name="password" ng-model="resigterdetails.password" ng-attr-type="{{ showPassword ? 'text' : 'password' }}">
+          <input required name="password" ng-model="resigterdetails.password" ng-attr-type="{{ showPassword ? 'text' : 'password' }}" ng-minlength="8" ng-maxlength="16">
           
           <div ng-messages="register_form.password.$error">
             <div ng-message="required">This is required.</div>
+            <div ng-message="minlength">Minimum length must be 8 characters.</div>
+            <div ng-message="maxlength">Maximum length can be 16 characters.</div>
           </div>
         </md-input-container>
         <md-input-container flex="">

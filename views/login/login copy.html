@@ -54,7 +54,7 @@
               lock
               </span>
           </md-icon>
-          <input required name="password" ng-model="loginDetails.password" ng-attr-type="{{ showPassword ? 'text' : 'password' }}">
+          <input required name="password" ng-model="loginDetails.password" ng-attr-type="{{ showPassword ? 'text' : 'password' }}" ng-maxlength="16">
           <md-icon md-font-icon="android" aria-label="android" ng-click="togglePassword()">
             <span class="material-symbols-outlined" ng-if="!showPassword">
               visibility_off
@@ -65,6 +65,7 @@
           </md-icon>
           <div ng-messages="login_form.password.$error">
             <div ng-message="required">This is required.</div>
+            <div ng-message="maxlength">Maximum length can be 16 characters.</div>
           </div>
         </md-input-container>
         </div>
