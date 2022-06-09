@@ -1,20 +1,19 @@
-<div ng-init="init()" style="overflow-y: scroll;overflow-x: hidden;width:90vw;height:80vh" layout="row" id="popupContainer">
+<div ng-app="app.navbar" ng-init="init()" style="overflow-y: scroll;overflow-x: none;width:100vw;height:85vh;" id="popupContainer">
     <link rel="stylesheet" href="./views/library/library.css">
 
-    <div flex="35" layout="row" layout-padding>
-      <div layout="column" layout-padding>
-        <md-card layout-align="center center" ng-repeat="movie in movies_library track by $index">
-        <img ng-src="https://image.tmdb.org/t/p/w500/{{movie.backdrop_path}}" class="md-card-image" alt="Movie image">
+    <div class="container">
+      <div class="row row-cols-auto gap-1 justify-content-center" >  
+      <div ng-repeat="movie in movies_library track by $index" class="col-3">
+        <md-card style="height:20em" class="align center">
+        <img src="https://image.tmdb.org/t/p/w300/{{movie.backdrop_path}}" class="md-card-image" alt="Movie image">
         <md-card-title>
           <md-card-title-text>
             <span class="md-headline">{{movie.original_title}}</span>
           </md-card-title-text>
         </md-card-title>
-        <md-card-content>
-            <p>{{movie.overview.substring(0,200)}}</p>
-        </md-card-content>
-       <md-button class="md-primary md-raised" ng-click="isLogin($event)">Watch Now</md-button>
+       <md-button class="md-primary md-raised justify-content-center" ng-click="isLogin($event)" flex="">Watch Now</md-button>
       </md-card>
+      </div>
       </div>
       </div>
 </div>

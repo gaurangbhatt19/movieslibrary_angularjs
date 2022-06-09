@@ -1,18 +1,23 @@
-<div ng-controller="AppCtrl" ng-cloak>
+<div ng-controller="AppCtrl as nav" ng-cloak ng-app="app.navbar">
     <link rel="stylesheet" href="views/navbar/navbar.css">
     <md-content class="nav_bar" style="background-color:rgba(255,255,255,0.8)">
       <md-nav-bar
-        md-no-ink-bar="disableInkBar"
+        md-no-ink-bar="false"
         md-selected-nav-item="currentNavItem"
-        nav-bar-aria-label="navigation links" >
-        <md-nav-item md-nav-href="/index.html#!/login" name="login">Login</md-nav-item>
-        <md-nav-item md-nav-href="/index.html#!/register" name="register">Register</md-nav-item>
-        <md-nav-item md-nav-href="/index.html#!/premium" name="premium" >Membership</md-nav-item>
-        <md-nav-item md-nav-href="/index.html#!/library" name="library" >Library</md-nav-item>
-        <div flex="20" class="logo"></div>
-        <small flex="25" layout="row" layout-align="center center">Music Gallery, listen to unlimited songs</small>
+        nav-bar-aria-label="navigation links" 
+        >
+        <md-nav-item md-nav-href="/index.html#!/login" value="login" name="login">Login</md-nav-item>
+        <md-nav-item md-nav-href="/index.html#!/register"  value="register" name="register">Register</md-nav-item>
+        <md-nav-item md-nav-href="/index.html#!/premium" value="premium" name="premium" >Membership</md-nav-item>
+        <md-nav-item md-nav-href="/index.html#!/library" value="library" name="library" >Library</md-nav-item>
         <div flex="15" class="logo"></div>
-        <img src="views/style/coriolis-logo.png" id="logo_navbar" flex="15" />
+        <small flex="30" layout="row" layout-align="center center">Watch unlimited high quality Movies only on</small>
+        <div flex="10" class="logo"></div>
+        <div layout="row" layout-align="center center">
+           <h4 flex layout="row"><strong>MyMovieGallery</strong></h4>
+        </div>
+
+       
       </md-nav-bar>
     </md-content>
   </div>
