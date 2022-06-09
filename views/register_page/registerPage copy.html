@@ -69,15 +69,7 @@
             lock
             </span>
         </md-icon>
-        <input required type="password" name="confirmpassword" ng-model="resigterdetails.confirmpassword" ng-change="validateConfirmPassword()" ng-attr-type="{{ showPassword ? 'text' : 'password' }}">
-        <md-icon md-font-icon="android" aria-label="android" ng-click="togglePassword()">
-          <span class="material-symbols-outlined" ng-if="!showPassword">
-            visibility
-            </span>
-            <span class="material-symbols-outlined" ng-if="showPassword">
-              visibility_off
-              </span>
-        </md-icon>
+        <input required type="password" name="confirmpassword" ng-model="resigterdetails.confirmpassword" ng-change="validateConfirmPassword()">
 
         <div ng-messages="register_form.confirmpassword.$error">
           <div ng-message="required">This is required.</div>

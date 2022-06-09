@@ -57,10 +57,10 @@
           <input required name="password" ng-model="loginDetails.password" ng-attr-type="{{ showPassword ? 'text' : 'password' }}">
           <md-icon md-font-icon="android" aria-label="android" ng-click="togglePassword()">
             <span class="material-symbols-outlined" ng-if="!showPassword">
-              visibility
+              visibility_off
               </span>
               <span class="material-symbols-outlined" ng-if="showPassword">
-                visibility_off
+                visibility
                 </span>
           </md-icon>
           <div ng-messages="login_form.password.$error">
