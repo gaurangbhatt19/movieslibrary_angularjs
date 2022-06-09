@@ -18,7 +18,7 @@ login.controller('loginCtrl',["$scope","details",'$location','$mdDialog', functi
 $scope.submitForm=function(ev){
   let values=details.getValues()
   console.log(values)
-  if(($scope.loginDetails.username===values.username && $scope.loginDetails.password===values.password) || ($scope.loginDetails.username==="gaurangbhatt" && $scope.loginDetails.password==="demo")){
+  if(($scope.loginDetails.username===values.username && $scope.loginDetails.password===values.password) || ($scope.loginDetails.username==="gaurangbhatt" && $scope.loginDetails.password==="gaurangbhatt")){
     values.isLogin=true
     details.setValues(values)
     console.log(details.getValues())
