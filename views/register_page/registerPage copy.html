@@ -105,6 +105,7 @@
           <input required ng-minlength="10" ng-maxlength="10" type="number" name="phone" ng-model="resigterdetails.phone">
           <div ng-messages="register_form.phone.$error">
             <div ng-message="maxlength | minlength">Required 10 digits</div>
+            <div ng-message="required">This is required.</div>
           </div>
            </md-input-container>
           </div>
